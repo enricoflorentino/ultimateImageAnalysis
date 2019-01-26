@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Staatliches|Crete+Round');
 
+.upload-btn-wrapper {
+    margin-top: 300px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.customBtn {
+    border: 2px solid rgb(27, 151, 56);
+    color: white;
+    background-color: rgb(27, 151, 56);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 70px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
 
 html,
 body {
@@ -251,7 +274,7 @@ section .subtitle-half h5 {
 .overlay {
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
-    min-height: 715px;
+    min-height: 720px;
 }
 .overlay-fluid-block {
     background-color: rgba(0, 0, 0, 0.5);
