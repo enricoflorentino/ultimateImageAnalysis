@@ -1,10 +1,5 @@
-/*
-Author: XpeedStudio
-Author URI: http://themeforest.net/user/XpeedStudio/portfolio
-*/
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Staatliches|Crete+Round');
+
 html,
 body {
     background-color: #ffffff;
@@ -14,7 +9,7 @@ body {
     padding: 0;
     margin-left: 0;
     margin-right: 0;
-    font-family: 'open_sanslight';
+    font-family: 'Crete Round', serif;
     font-weight: 300;
 }
 .preloader {
@@ -223,7 +218,7 @@ Section
 section .subtitle h5 {
     margin-top: 10px;
     font-size: 1.3rem;
-    font-family: 'roboto', sans-serif;
+    font-family: 'Crete Round', serif;
 }
 .parallax-section {
     max-width: 100%;
@@ -247,7 +242,7 @@ section .subtitle-half h5 {
 .heading h1{
     font-size: 40px;
     text-transform: uppercase;
-    font-family: 'lorabold';
+    font-family: 'Crete Round', serif;
     margin-bottom: 20px;
     color: #3a3f4b;
     letter-spacing: 1px;
@@ -255,7 +250,7 @@ section .subtitle-half h5 {
 .overlay {
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
-    min-height: 650px;
+    min-height: 715px;
 }
 .overlay-fluid-block {
     background-color: rgba(0, 0, 0, 0.5);
@@ -309,7 +304,7 @@ Button
 */
 .btn {
     padding: 16px 60px;
-    font-family: 'open_sanssemibold';
+    font-family: 'Crete Round', serif;
     border-radius: 50px;
     font-size: 22px;
     box-shadow:2px 2px 5px 0 rgba(55,50,40, .20);
@@ -320,7 +315,7 @@ Button
 }
 .btn-primary{
     color: #fff;
-    background-color: #00a5ff;
+    background-color: #3aaa2e;
     border-color: transparent;
     transition: .3s ease-in-out;
     -webkit-transition: .3s ease-in-out;
@@ -467,7 +462,7 @@ textarea::-ms-input-placeholder
 .navbar-default .navbar-nav>li>a {
     color: #ffffff;
     text-transform: uppercase;
-    font-family: 'open_sanssemibold';
+    font-family: 'Crete Round', serif;
 }
 .nav>li>a:hover, .nav>li>a:focus {
     text-decoration: none;
@@ -502,12 +497,12 @@ textarea::-ms-input-placeholder
 }
 .home-content h1{
     margin-bottom: 45px;
-    font-family: 'lorabold';
+    font-family: 'Crete Round', serif;
     font-size: 60px;
 }
 .home-content h4{
     margin-bottom: 75px;
-    font-family: 'open_sansregular';
+    font-family: 'Crete Round', serif;
     font-size: 20px;
     color: #3a3f4b;
 }
@@ -521,7 +516,7 @@ textarea::-ms-input-placeholder
 .service-item h5{
     text-transform: uppercase;
     color: #3a3f4b;
-    font-family: 'lorabold';
+    font-family: 'Crete Round', serif;
 }
 
 .service-item i{
@@ -592,7 +587,7 @@ textarea::-ms-input-placeholder
     background: transparent;
     border: none;
     text-transform: uppercase;
-    font-family: 'open_sansregular';
+    font-family: 'Crete Round', serif;
     height: 50px;
     line-height: 50px;
 }
@@ -650,7 +645,7 @@ textarea::-ms-input-placeholder
     padding: 12px 0;
     text-align: left;
     margin-left: 30px;
-    font-family: 'open_sanssemibold';
+    font-family: 'Crete Round', serif;
 }
 
 /* Brand Sections */
@@ -670,13 +665,13 @@ textarea::-ms-input-placeholder
 .item .details p{
     font-size: 25px;
     line-height: 30px; 
-    font-family: 'open_sansregular';
+    font-family: 'Crete Round', serif;
     color: #3a3f4b;
     margin-bottom:50px;
 }
 .item .details small{
     font-size: 20px;
-    font-family: 'open_sansregular';
+    font-family: 'Crete Round', serif;
     color: #3a3f4b;
 }
 .item .details small a{
@@ -767,12 +762,12 @@ textarea::-ms-input-placeholder
 }
 .contact-top h1{
     font-size: 36px;
-    font-family: 'lorabold';
+    font-family: 'Crete Round', serif;
 }
 .contact-top li a{
     color: #ffffff;
     text-transform: uppercase;
-    font-family: 'open_sanssemibold';
+    font-family: 'Crete Round', serif;
     transition: .3s ease-in-out;
 }
 .contact-top li a:hover{
@@ -783,7 +778,7 @@ textarea::-ms-input-placeholder
 }
 .contact-left-info h5{
     text-transform: uppercase;
-    font-family: 'open_sanssemibold';
+    font-family: 'Crete Round', serif;
     font-size: 24px;
 }
 .contact-form .form-group label{
@@ -834,7 +829,7 @@ textarea::-ms-input-placeholder
     position: relative;
 }
 .copyright{
-    font-family: 'open_sansregular';
+    font-family: 'Crete Round', serif;
     font-size: 15px;
 }
 .social a i{
