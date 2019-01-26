@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Staatliches|Crete+Round');
 
+
 html,
 body {
     background-color: #ffffff;
@@ -317,6 +318,8 @@ Button
     color: #fff;
     background-color: #3aaa2e;
     border-color: transparent;
+    margin: auto;
+    margin-top: 200px;
     transition: .3s ease-in-out;
     -webkit-transition: .3s ease-in-out;
     -moz-transition: .3s ease-in-out;
