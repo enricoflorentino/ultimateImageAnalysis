@@ -9,7 +9,6 @@ import numpy as np
 from flask import Flask, jsonify, request, send_from_directory, render_template
 from flask_cors import CORS
 from phaseAnalysis import GrainPic
-import random
 
 sns.set(color_codes=True);
 
@@ -138,7 +137,6 @@ def upload_file():
         # result.append(for_hist.make_histogram());
         hist = for_hist.make_histogram()
         fig = hist.get_figure()
-        rand_num = random.randint(1, 1000)
         fig.savefig('static\Figure_1.png')
         filename = 'static\Figure_1.png'
         return render_template('update.html',result=result, user_image=filename);
