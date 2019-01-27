@@ -9,8 +9,8 @@ input[type="file"] {
 }
 
 #subbutton {
-    border: 1px solid #b6c4db;
-    background-color: #b6c4db;
+    border: 1px solid #9eabc0;
+    background-color: #9eabc0;
     display: inline-block;
     padding: 12px 24px;
     cursor: pointer;
@@ -537,7 +537,8 @@ textarea::-ms-input-placeholder
 .home-content h1{
     margin-bottom: 45px;
     font-family: 'Crete Round', serif;
-    font-size: 60px;
+    font-size: 70px;
+    letter-spacing: 8px;
 }
 .home-content h4{
     margin-bottom: 75px;
