@@ -105,7 +105,11 @@ class GrainPic2:
         return ((np.sum(self.img == other_pic.img))/self.num_pixels)*100
 
     def make_histogram(self):
-        return sns.distplot(self.grain_sizes)
+        plt.hist(self.grain_sizes)
+        plt.title('Grain Sizes Histogram')
+        plt.xlabel('Grain Size (Equivalent Diameter in Pixels)')
+        plt.ylabel('Frequency')
+        plt.savefig('static\Figure_1.png')
 
     def __repr__(self):
         return str(self.img)
@@ -134,10 +138,7 @@ def upload_file():
         result = [];
         result.append(test.fraction_of_darks);
 
-        # result.append(for_hist.make_histogram());
         hist = for_hist.make_histogram()
-        fig = hist.get_figure()
-        fig.savefig('static\Figure_1.png')
         filename = 'static\Figure_1.png'
         return render_template('update.html',result=result, user_image=filename);
 
