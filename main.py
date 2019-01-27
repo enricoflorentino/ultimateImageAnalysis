@@ -40,7 +40,7 @@ def upload_file():
         # 
 
 
-        return 'OK'
+        return app.send_static_file('update.html');
 
 if __name__ == '__main__':
     app.run(debug=True)
