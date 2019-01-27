@@ -28,6 +28,13 @@ def process():
         #     engine = Engine(move, position, computer_color)
         #     jsonified = jsonify(engine.build_output_data())
         #     return jsonified
+    
+@app.route('/uploaded', methods=['GET','POST'])
+def upload_file():
+    if request.method == 'POST':
+        file = request.files['file']
+        print(file);
+        return 'OK'
 
 if __name__ == '__main__':
     app.run(debug=True)
