@@ -25,11 +25,6 @@ def process():
         # If there is no input data, send the index.html
         if input_data == {}:
             return app.send_static_file('index.html')
-        # else:
-        #     image = request.file
-        #     thresholded = GrainPic(image, threshold=True)
-        #     fraction_of_darks = thresholded.fraction_of_darks
-        #     grain_sizes = thresholded.make_histogram()
 
 
 class Grain:
@@ -58,7 +53,7 @@ class Grain:
             self.color = 'white'
 
 
-class GrainPic2:
+class AdaptiveThreshold:
 
     def __init__(self, path, threshold=False):
         self.img = cv2.imread(path, 0)
@@ -113,17 +108,6 @@ class GrainPic2:
 
     def __repr__(self):
         return str(self.img)
-        # else:
-        #     print('------------------------')
-        #     print('Input Data: ', input_data)
-        #     print('------------------------')
-        #     move = input_data['move_sent_to_py'][0]
-        #     position = input_data['position'][0]
-        #     computer_color = input_data['ComputerColor'][0]
-
-        #     engine = Engine(move, position, computer_color)
-        #     jsonified = jsonify(engine.build_output_data())
-        #     return jsonified
     
 @app.route('/uploaded', methods=['GET','POST'])
 def upload_file():
@@ -134,7 +118,7 @@ def upload_file():
 
         print(file.filename);
         test = GrainPic(file.filename, True);
-        for_hist = GrainPic2(file.filename, True);
+        for_hist = AdaptiveThreshold(file.filename, True);
         result = [];
         result.append(test.fraction_of_darks);
 
