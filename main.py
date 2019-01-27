@@ -4,6 +4,8 @@ import os
 import numpy as np
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
+from phaseAnalysis import GrainPic
+
 
 UPLOAD_FOLDER = '/static/assets'
 app = Flask(__name__)
@@ -37,10 +39,10 @@ def upload_file():
         file.save(file.filename);     
         print("This is the file: ",file);
 
-        # 
-
-
-        return app.send_static_file('update.html');
+        print(file.filename);
+        test = GrainPic(file.filename, 'true');
+        print (test.get_dark_fraction());
+        return 'Dark fraction: {0:.2f}'.format(test.get_dark_fraction());
 
 if __name__ == '__main__':
     app.run(debug=True)
