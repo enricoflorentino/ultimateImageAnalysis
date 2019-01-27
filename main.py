@@ -10,6 +10,9 @@ from flask import Flask, jsonify, request, send_from_directory, render_template
 from flask_cors import CORS
 from phaseAnalysis import GrainPic
 
+import matplotlib
+matplotlib.use('Agg')
+
 sns.set(color_codes=True);
 
 app = Flask(__name__)
@@ -105,6 +108,7 @@ class AdaptiveThreshold:
         plt.xlabel('Grain Size (Equivalent Diameter in Pixels)')
         plt.ylabel('Frequency')
         plt.savefig('static\Figure_1.png')
+        plt.close()
 
     def __repr__(self):
         return str(self.img)
@@ -114,9 +118,6 @@ def upload_file():
     if request.method == 'POST':
         file = request.files['file'];      
         file.save(file.filename);     
-        print("This is the file: ",file);
-
-        print(file.filename);
         test = GrainPic(file.filename, True);
         for_hist = AdaptiveThreshold(file.filename, True);
         result = [];
