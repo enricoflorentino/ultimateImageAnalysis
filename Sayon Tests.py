@@ -57,6 +57,8 @@ class GrainPic:
             self.grain_boundaries = self.find_grain_boundaries()
             self.thresh = cv2.adaptiveThreshold(self.img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
                                            cv2.THRESH_BINARY,11, 1)
+            show(self.img)
+            show(self.thresh)
             limit, _ = cv2.threshold(self.img, 0, 255, cv2.THRESH_BINARY+cv2.THRESH_OTSU)
             # kernel = np.ones((2, 2), np.uint8)
             # thresh = cv2.erode(thresh, kernel, iterations=4)
@@ -67,6 +69,7 @@ class GrainPic:
             for contour in contours:
                 if cv2.contourArea(contour) > 700:
                     self.grains.append(Grain(contour, self.img, limit))
+
             self.whites = sum([grain.area for grain in self.grains if grain.color == 'white'])
             self.darks = sum([grain.area for grain in self.grains if grain.color == 'dark'])
             self.grain_sizes = [grain.equivalent_diameter for grain in self.grains]
@@ -154,8 +157,9 @@ def check_all():
     print(count)
     print(f'mean:{sum(errors)/len(errors)}')
     print(f'median:{median(errors)}')
+
 def check_image(image_num=0):
-    attempt_path = r'C:\Users\enric\Desktop\image_181.png'
+    attempt_path = r'C:\Users\enric\Desktop\image_grad_0.png'
     attempt = GrainPic(attempt_path, threshold=True)
     print(attempt.fraction_of_darks)
 
