@@ -4,8 +4,12 @@ function sendBack(input) {
 }
 
 
-$("#submitthis").submit(function(e) {
-    console.log("clicked");
+$("#submitthis").submit(function(event) {
+    event.preventDefault();
+    console.log(event)
     
-    $.ajax
+    // $.ajax({
+    //     url: '/',
+    //     dataType: 
+    // })
 });
