@@ -39,12 +39,13 @@ class Grain:
         for point in points:
             intensities += img[point[1]][point[0]]
         self.average_intensity = intensities/len(points)
+
         if self.average_intensity <= self.threshold:
             self.color = 'dark'
         else:
             self.color = 'white'
         # print(self.average_intensity)
-        print(self.color)
+        # print(self.color)
         show(self.img)
 
 
@@ -139,6 +140,7 @@ def show(image=None):
 folder_path = '/home/sayon/Documents/Datasets/Materials Micrographs'
 folder = 'Target 1'
 folder_path = os.path.join(folder_path, folder)
+
 def check_all():
     count = 0
     errors = []
@@ -159,7 +161,7 @@ def check_all():
     print(f'median:{median(errors)}')
 
 def check_image(image_num=0):
-    attempt_path = r'C:\Users\enric\Desktop\image_grad_0.png'
+    attempt_path = r'C:\Users\enric\Desktop\realmicro.png'
     attempt = GrainPic(attempt_path, threshold=True)
     print(attempt.fraction_of_darks)
 

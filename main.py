@@ -121,7 +121,7 @@ def upload_file():
         test = GrainPic(file.filename, True);
         for_hist = AdaptiveThreshold(file.filename, True);
         result = [];
-        result.append(test.fraction_of_darks);
+        result.append(f'{test.fraction_of_darks*100}%');
 
         hist = for_hist.make_histogram()
         filename = 'static\Figure_1.png'

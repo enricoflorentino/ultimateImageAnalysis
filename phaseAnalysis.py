@@ -18,14 +18,11 @@ class GrainPic:
         self.whites = np.sum(self.img == 0)
         self.darks = np.sum(self.img == 255)
 
-        self.fraction_of_darks = self.darks/self.num_pixels
+        self.fraction_of_darks = round(self.darks/self.num_pixels, 3)
 
     def error(self, answer_pic):
         difference = abs(self.fraction_of_darks-answer_pic.fraction_of_darks)
         return (difference/answer_pic.fraction_of_darks)*100
-
-    def get_dark_fraction(self):
-        return self.fraction_of_darks
 
     def __repr__(self):
         return str(self.img)
