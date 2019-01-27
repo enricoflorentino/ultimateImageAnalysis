@@ -5,6 +5,7 @@ import numpy as np
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
+UPLOAD_FOLDER = '/static/assets'
 app = Flask(__name__)
 CORS(app)
 
@@ -32,8 +33,13 @@ def process():
 @app.route('/uploaded', methods=['GET','POST'])
 def upload_file():
     if request.method == 'POST':
-        file = request.files['file']
-        print(file);
+        file = request.files['file'];      
+        file.save(file.filename);     
+        print("This is the file: ",file);
+
+        # 
+
+
         return 'OK'
 
 if __name__ == '__main__':
